@@ -1,0 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+	background-color: #bababa;
+	color: #000000;
+	height: 5000px;
+}
