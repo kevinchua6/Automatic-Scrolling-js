@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Texthooker</title>
+<style type="text/css">
+html {
+  scroll-behavior: smooth;
+}
+body {
+	background-color: #bababa;
+	color: #000000;
+	height: 5000px;
+}
+</style>
+</head>
+<body>
+<font size = "7"><div>The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety of a new dark age.
+Theosophists have guessed at the awesome grandeur of the cosmic cycle wherein our world and human race form transient incidents. They have hinted at strange survivals in terms which would freeze the blood if not masked by a bland optimism. But it is not from them that there came the single glimpse of forbidden aeons which chills me when I think of it and maddens me when I dream of it. That glimpse, like all dread glimpses of truth, flashed out from an accidental piecing together of separated things—in this case an old newspaper item and the notes of a dead professor. I hope that no one else will accomplish this piecing out; certainly, if I live, I shall never knowingly supply a link in so hideous a chain. I think that the professor, too, intended to keep silent regarding the part he knew, and that he would have destroyed his notes had not sudden death seized him.
+</div><font>
+<font size = "5"><div>http://www.hplovecraft.com/writings/texts/fiction/cc.aspx</div><font>
+
+<!-- jQuery is needed for this to run. You can change it to an offline version if you prefer-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script>
+var scroll_step = 23;
+var scrolling = false;
+var scroll_function_running = false;
+
+function scrollContentup(){
+	if (scrolling == true){
+		window.scrollBy(0,-scroll_step);
+		scrolldelay = setTimeout('scrollContentup()',50); // scrolls every 100 milliseconds
+		}
+}
+
+function scrollContentdown(){
+	if (scrolling == true){
+		window.scrollBy(0,scroll_step);
+		scrolldelay = setTimeout('scrollContentdown()',50); // scrolls every 100 milliseconds
+		}
+}
+
+$(document).ready(function(){
+
+console.log('started!');
+console.log($(window).height());
+console.log($(document).height());
+
+
+
+	$(document).mousemove(function(e){
+		if (10 < e.clientY && e.clientY < 100){
+		//Change to window height - 100
+			if (scroll_function_running == false){
+				scrolling = true;
+				console.log("scroll up");
+				scrollContentup();
+				scroll_function_running = true;
+			}
+		} else if ( $(window).height() - 100 < e.clientY && e.clientY < $(window).height() - 10) {
+			if (scroll_function_running == false){
+				scrolling = true;
+				console.log("scroll down");
+				scrollContentdown();
+				scroll_function_running = true;
+			}
+		} else {
+		scrolling = false;
+		scroll_function_running = false;
+		}
+	});
+});
+</script>
+</body>
+</html>
