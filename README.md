@@ -10,6 +10,7 @@ You can enable the scrolling by running `enable_scrolling(upper_boundary,lower_b
 
 `upper_boundary` and `lower_boundary` refer to the size of the areas, in pixels, at the top and bottom of the screen where the scrolling will take place. If no values are given, a default value of 100 pixels is assumed for both.
 
+refer to the example folder for more information.
 
 Adjust `scroll_step` to change the speed of scrolling  
 `scroll-behavior: smooth;` can be removed if smooth scrolling is not desired  
