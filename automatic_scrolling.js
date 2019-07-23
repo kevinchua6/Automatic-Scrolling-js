@@ -16,7 +16,7 @@
 var scroll_step = 15;
 var scrolling = false;
 var scroll_function_running = false;
-var scroll_button = false;
+var scroll_button = true;
 
 
 
@@ -65,3 +65,10 @@ function enable_scrolling(upper_boundary=100, lower_boundary=100) {
 		}
 	});
 }
+
+$(document).ready(function() {
+	$(".toggle_scrolling_button").click(function() {
+		scroll_button = !scroll_button;
+		console.log("toggle");
+	})
+})

@@ -14,7 +14,7 @@ body {
 	display:inline-block;
 }
 
-#toggle_scrolling_button {
+.toggle_scrolling_button {
 	background-color:rgba(25,25,25,0.8);
 	color:#9d9d9d;
 	font-size:.5em;

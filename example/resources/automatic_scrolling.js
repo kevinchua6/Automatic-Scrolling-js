@@ -65,3 +65,10 @@ function enable_scrolling(upper_boundary=100, lower_boundary=100) {
 		}
 	});
 }
+
+$(document).ready(function() {
+	$(".toggle_scrolling_button").click(function() {
+		scroll_button = !scroll_button;
+		console.log("toggle");
+	})
+})
