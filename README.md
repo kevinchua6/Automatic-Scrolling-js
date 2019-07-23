@@ -7,8 +7,17 @@ Add the file `automatic_scrolling.js` to your html file after adding `jQuery`.
 
 You can enable the scrolling by running `enable_scrolling(upper_boundary,lower_boundary)`.
 
+`upper_boundary` and `lower_boundary` refer to the size of the areas, in pixels, at the top and bottom of the screen where the scrolling will take place. If no values are given, a default value of 100 pixels is assumed for both.  
+  
+A button to toggle the scrolling can be created with the id `#toggle_scrolling_button ` and with the following code placed in index.html.  
+```
+<script>  
+document.getElementById("toggle_scrolling_button").addEventListener("click", function() {  
+scroll_button = !scroll_button;  
+})  
+</script>  
+```
 
-`upper_boundary` and `lower_boundary` refer to the size of the areas, in pixels, at the top and bottom of the screen where the scrolling will take place. If no values are given, a default value of 100 pixels is assumed for both.
 
 Refer to the example folder for more information.
 
